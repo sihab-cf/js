@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript 2</title>
+</head>
+<body>
+
+<input id="i1" type="number">
+<input id="i2" type="number">
+<p id="demo"></p>
+
+
+
+<video autoplay></video>
+
+<script>
+const constraints = {
+  video: true
+};
+
+const video = document.querySelector('video');
+
+function handleSuccess(stream) {
+  video.srcObject = stream;
+}
+
+function handleError(error) {
+  console.error('Reeeejected!', error);
+}
+
+navigator.mediaDevices.getUserMedia(constraints).
+  then(handleSuccess).catch(handleError);
+</script>
+
+
+<script type="text/javascript">
+
+
+
+</script>
+</body>
+</html>
